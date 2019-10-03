@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import "./out.scss";
 import { Button } from "semantic-ui-react";
 
-function Out({ percentPeriod, value, growthPercent }) {
+function Out({ investment, interestRate }) {
 
-const FirstText = ()=>  {return (<div className='first-text'> Выберите процентый период </div> 
+
+    const [growthPercent, setGrowthPercent] = useState("");
+
+    useEffect(() => {
+      growingPercentage(investment, interestRate);
+    }, [investment, interestRate]);
+  
+    function growingPercentage(val, precent) {
+     
+      setGrowthPercent((val / 100) * precent);
+    }
+
+
+
+
+
+
+const Placeholder = ()=>  {return (<div className='placeholder'> Выберите срок инвестирования </div> 
 )}
 
-    if(!percentPeriod){
-        return <FirstText/>
+    if(!interestRate){
+        return <Placeholder/>
     }
 
   return (
@@ -19,7 +37,7 @@ const FirstText = ()=>  {return (<div className='first-text'> Выберите �
             <div className="investments__item">
               <div className="investments__title">Инвестиции</div>
               <div className="investments__count">
-                {value.toLocaleString("ru-RU")}&ensp;&#8381;
+                {investment.toLocaleString("ru-RU")}&ensp;&#8381;
               </div>
               <div className="investments__column"></div>
             </div>
@@ -35,7 +53,7 @@ const FirstText = ()=>  {return (<div className='first-text'> Выберите �
         <div className="center">
           <div className="precent">
             <span className="precent__text">Прирост стоимости паев</span>
-            <div className="precent__sum">{percentPeriod?percentPeriod:0}&ensp;&#37;</div>
+            <div className="precent__sum">{interestRate}&ensp;&#37;</div>
           </div>
         </div>
         <div className="buttom">
@@ -43,7 +61,7 @@ const FirstText = ()=>  {return (<div className='first-text'> Выберите �
 
             <div className="ammount__title">Стоимость Паев</div>
             <div className="ammount__total">
-              {(value + growthPercent).toLocaleString("ru-RU")}&ensp;&#8381;
+              {(investment + growthPercent).toLocaleString("ru-RU")}&ensp;&#8381;
             </div>
             <Button size="massive" color='yellow' className='ammount__button circular'>Получить</Button>
           </div>

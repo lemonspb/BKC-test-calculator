@@ -1,42 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Range from "../Range";
 import Period from "../Period";
 import Out from '../Out'
 import './app.scss'
 function App() {
-  const [value, setValue] = useState("");
-  const [percentPeriod, setPercentPeriod] = useState("");
-  const [growthPercent, setGrowthPercent] = useState("");
-
-  useEffect(() => {
-    growingPercentage(value, percentPeriod);
-  }, [value, percentPeriod]);
-
-  function growingPercentage(val, precent) {
-   
-    setGrowthPercent((val / 100) * precent);
-  }
+  const [investment, setInvestment] = useState(0);
+  const [interestRate, setInterestRate] = useState(0);
+ const [active, setActive] = useState('')
 
   const valueChange = val => {
-    setValue(Number(val)*1000);
+    setInvestment(Number(val)*1000);
   };
 
-  const handleClickPeriod = e => {
-    setPercentPeriod(Number(e.target.value));
-  };
+    const handleClickPeriod = (e) => {
+       if(e.target.value){
+            setActive(e.target.value)
+            setInterestRate(Number(e.target.value));
+        
+        }
+        
+    };
 
 
   return (
     <React.Fragment>
       
-      <div className='calculater'>
-       <div className='calculater__left'>
+      <div className='calculator'>
+       <section className='calculator__left'>
       <Range valueChange={valueChange} />
-      <Period handleClickPeriod={handleClickPeriod} />
-      </div>
-      <div className='calculater__right'>
-     <Out value={value} percentPeriod={percentPeriod} growthPercent={Number(growthPercent)} />
-     </div>
+      <Period handleClickPeriod={handleClickPeriod} active={active}/>
+      </section>
+      <section className='calculator__right'>
+     <Out investment={investment} interestRate={interestRate} />
+     </section>
      </div>
     
     </React.Fragment>
