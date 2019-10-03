@@ -13,13 +13,19 @@ background-color: #F7F7F7;
 
 .srock{
 width: 100%;
+@media screen and (max-width: 500px) {
+    flex-direction: column !important;
 
-    
+}
 }
 
 
 .button-srock{
-    color: #427198 !important;
+    @media screen and (max-width: 500px) {
+        margin-bottom: 10px !important;
+
+        
+    }
     border-radius: 100px !important;
   
    

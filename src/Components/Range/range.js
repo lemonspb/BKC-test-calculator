@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
-import {  Form } from 'semantic-ui-react'
 import './range.scss'
-
-
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 const  Range = ({valueChange})=> {
 
 const [duration, setDuration ] =  useState(50)
 
 valueChange(duration)
 
-  
+const marks = {
+  50: <strong>50 т.</strong>,
+  500: <strong>500 т.</strong>,
+  1000: <strong>1000 т.</strong>,
+  2000: <strong>2000 т.</strong>,
+  3000: <strong>3000 т.</strong>
+};
 
- const  handleChangeValue = (e) => setDuration(e.target.value)
+ const  handleChangeValue = (e) => setDuration(e)
 
     return (
 
@@ -20,24 +25,19 @@ valueChange(duration)
          {Number((duration)*1000).toLocaleString('ru-RU')}&ensp;&#8381;</div></div>
 
           <form className='range__form'>
-            <input
+            <Slider
               min={50}
               max={3000}
-              name='duration'
+              marks={marks}
               onChange={handleChangeValue}
               step={1}
-              type='range'
-              value={duration}
-              list="duration"
+              defaultValue={duration}
+              railStyle={{background:'grey',height: '10px'}}
+              trackStyle={{height: '10px'}}
+              handleStyle={{width: '25px',height: '25px'}}
+              dotStyle={{width: '15px',height: '15px', marginBottom: '-6px'}}
             />
-      <datalist className="range__list" id="duration">
-    <option className="range__opt opt0" value="50" label="50" onClick ={handleChangeValue} /> 
-    <option className="range__opt" value="500" label="500" onClick ={handleChangeValue} /> 
-    <option className="range__opt"value="1000" label="1000" onClick ={handleChangeValue} /> 
-
-    <option className="range__opt" value="2000" label="2000"onClick ={handleChangeValue}  /> 
-    <option className="range__opt" value='3000' label='3000'onClick ={handleChangeValue}  />  
-  </datalist>
+   
 
           </form>
 
