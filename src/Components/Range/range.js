@@ -31,12 +31,12 @@ valueChange(duration)
               list="duration"
             />
       <datalist className="range__list" id="duration">
-    <option className="range__opt opt0" value="50" label="50" /> 
-    <option className="range__opt" value="500" label="500"/> 
-    <option className="range__opt"value="1000" label="1000"/> 
+    <option className="range__opt opt0" value="50" label="50" onClick ={handleChangeValue} /> 
+    <option className="range__opt" value="500" label="500" onClick ={handleChangeValue} /> 
+    <option className="range__opt"value="1000" label="1000" onClick ={handleChangeValue} /> 
 
-    <option className="range__opt" value="2000" label="2000" /> 
-    <option className="range__opt" value='3000' label='3000' />  
+    <option className="range__opt" value="2000" label="2000"onClick ={handleChangeValue}  /> 
+    <option className="range__opt" value='3000' label='3000'onClick ={handleChangeValue}  />  
   </datalist>
 
           </form>
