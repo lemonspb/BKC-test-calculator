@@ -31,18 +31,70 @@
   }
 
   &__money {
-    color: #427198;
+    text-align: end;
+    display: block;
     font-size: 30px;
-    display: inline-block;
-    text-shadow: 1px 1px #fff;
-    padding: 0.3em 1em;
-    border: 1px solid #aaa;
+    line-height: 35px;
+    margin-top: 0;
+    margin-bottom: 9px;
+    font-weight: 300;
+    margin-bottom: 0;
+    text-decoration: none;
+    border: none;
     border-radius: 100px;
-    outline: none;
-    background: #fff;
+    padding: 8px 1px;
+    padding-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+
   }
 
   &__form {
     width: 100%;
+    padding: 0 10px;
   }
+}
+.rc-slider-mark-text{
+  width: 50px;
+  margin-top: 14px;
+
+}
+
+.abc{
+  transition: padding 1s ease;
+  display: flex;
+
+}
+.dfd{
+  background: #fff;
+  color: #1a1a1a;
+  line-height: 1;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 100px;
+  font-size: 30px;
+
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 11px 40px 11px 2px;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  box-shadow: none;
+  min-width: 40px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

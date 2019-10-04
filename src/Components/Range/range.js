@@ -16,24 +16,39 @@ const Range = ({ valueChange }) => {
   };
 
   const handleChangeValue = e => setDuration(e);
+ const handleChangeInput = e =>  {
 
+if((e.target.value.length === 2 || e.target.value >= 50)  && e.target.value.length<=4){
+  setDuration(e.target.value)
+}
+  
+ }
   return (
     <div className="range">
       <div className="range__sum">
-        <span className="range__text">Сумма для инвестирования</span>{" "}
-        <div className="range__money">
-          {Number(duration * 1000).toLocaleString("ru-RU")}&ensp;&#8381;
-        </div>
+        <span className="range__text">Сумма для инвестирования</span>
+        <div className='abc'>      
+         <input type='number' 
+        className="range__money"
+        min={50}
+          max={3000}
+          onChange={handleChangeInput}
+          step={10}
+          value={duration}
+         />
+          <div className='dfd'>000&ensp;&#8381;</div>
+         </div>
       </div>
 
       <form className="range__form">
+        
         <Slider
           min={50}
           max={3000}
           marks={marks}
           onChange={handleChangeValue}
-          step={1}
-          defaultValue={duration}
+          step={10}
+          value={Number(duration)}
           railStyle={{ background: "grey", height: "5px" }}
           trackStyle={{ height: "5px", background: "#4C9AFF" }}
           handleStyle={{
@@ -43,9 +58,10 @@ const Range = ({ valueChange }) => {
             marginTop: "-10px"
           }}
           dotStyle={{
-            width: "15px",
-            height: "15px",
-            marginBottom: "-3px",
+            width: "2px",
+            height: "10px",
+            marginBottom: "-20px",
+            background: "#666",
             border: "#4C9AFF"
           }}
         />

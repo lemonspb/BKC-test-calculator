@@ -5,10 +5,18 @@ import Out from "../Out";
 import ModalGet from "../Modal";
 import "./app.scss";
 function App() {
+  const arrayInterest = getRandomItem(["4.8","9.28","13.72","14.35","25.69"])
+
   const [investment, setInvestment] = useState(0);
-  const [interestRate, setInterestRate] = useState(0);
-  const [active, setActive] = useState("");
+  const [interestRate, setInterestRate] = useState(arrayInterest);
+  const [active, setActive] = useState(arrayInterest);
   const [modalOpen, setModalOpen] = useState(false);
+
+
+
+  function getRandomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
   const valueChange = val => {
     setInvestment(Number(val) * 1000);
