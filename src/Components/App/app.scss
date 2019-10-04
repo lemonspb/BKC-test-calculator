@@ -1,6 +1,5 @@
 .calculator {
   display: flex;
-  align-items: center;
   justify-content: center;
   border: 1px solid #427198;
   box-sizing: border-box;
@@ -13,6 +12,7 @@
   }
 
   &__left {
+    background: #DAE1E7;
     width: 60%;
     height: 100%;
     @media screen and (max-width: 1070px) {

@@ -7,12 +7,21 @@ function Out({ investment, interestRate ,handleClickModal}) {
   const [growthPercent, setGrowthPercent] = useState("");
 
   useEffect(() => {
+    
     growingPercentage(investment, interestRate);
   }, [investment, interestRate]);
 
   function growingPercentage(val, precent) {
     setGrowthPercent((val / 100) * precent);
   }
+
+
+   function addHeight(inv,num){
+
+    return inv/40000+num
+
+   }
+
 
   const Placeholder = () => {
     return <div className="placeholder"> Выберите срок инвестирования </div>;
@@ -33,6 +42,7 @@ function Out({ investment, interestRate ,handleClickModal}) {
                 {investment.toLocaleString("ru-RU")}&ensp;&#8381;
               </div>
               <div className="investments__column"></div>
+              <div className="investments__start" style={{height: addHeight(+investment, 1)+'px'}} ></div>
             </div>
             <div className="investments__item">
               <div className="investments__title">Прирост стоймости паев</div>
@@ -40,6 +50,8 @@ function Out({ investment, interestRate ,handleClickModal}) {
                 {growthPercent.toLocaleString("ru-RU")}&ensp;&#8381;
               </div>
               <div className="investments__column"></div>
+              <div className="investments__grow"  style={{height: addHeight(+growthPercent, 1)+'px'}}></div>
+              <div className="investments__start" style={{height: addHeight(+investment, 1)+'px'}}></div>
             </div>
           </div>
         </div>

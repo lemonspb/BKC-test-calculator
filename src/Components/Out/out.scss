@@ -46,9 +46,20 @@
     }
   }
   &__column {
+ display: flex;
+ flex-direction: column;
+  }
+  &__start{
+    transition: 1s height ease;
+
     width: 100%;
     height: 20px;
     background-color: #dae1e7;
+  }
+  &__grow{
+    transition: 1s height ease;
+    width: 100%;
+    background-color:#4C9AFF;
   }
 }
 .center {

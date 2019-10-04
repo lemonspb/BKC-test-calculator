@@ -34,7 +34,7 @@ if((e.target.value.length === 2 || e.target.value >= 50)  && e.target.value.leng
           max={3000}
           onChange={handleChangeInput}
           step={10}
-          value={duration}
+          value={Number(duration)}
          />
           <div className='dfd'>000&ensp;&#8381;</div>
          </div>
