@@ -17,22 +17,28 @@ const Range = ({ valueChange }) => {
 
   const handleChangeValue = e => setDuration(e);
  const handleChangeInput = e =>  {
-   
-  setDuration(e.target.value)}
-  
- 
+   console.log(Number(e.target.value))
+   if((e.target.value.length === 5 || e.target.value >= 50000)  && (e.target.value.length<=6 || e.target.value <= 3000000)){
+    setDuration(e.target.value/1000)
+    console.log(duration)
+  }
+}
   return (
     <div className="range">
       <div className="range__sum">
         <span className="range__text">Сумма для инвестирования</span>
+         <div className='input-sum'>           
          <input type='number' 
-        className="range__money"
-        min={50}
-          max={3000}
+        className="input-sum__currency"
+        min={50000}
+          max={3000000}
           onChange={handleChangeInput}
-          step={10}
-          value={Number(duration)}
+          step={1000}
+          value={Number(duration*1000)}
          />
+        <div className='input-sum__icon'>&ensp;&#8381;</div>
+         </div>
+
          </div>
 
       <form className="range__form">
