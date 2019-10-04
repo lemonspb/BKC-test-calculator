@@ -1,50 +1,48 @@
-.range{
-box-sizing: border-box;
-padding: 120px 20px;
-background-color: #DAE1E7;
-width: 100%;
-display: flex;
-height: 100%;   
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.range {
+  box-sizing: border-box;
+  padding: 135px 20px;
+  background-color: #dae1e7;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-&__sum{
+  &__sum {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
+
     @media screen and (max-width: 514px) {
       flex-direction: column;
     }
-}
+  }
 
-&__text{
+  &__text {
     font-size: 16px;
-    color:#427198;
+    color: #427198;
+
     @media screen and (max-width: 514px) {
       margin-bottom: 10px;
     }
-    
-}
-&__money{
-    color:#427198;
+  }
+
+  &__money {
+    color: #427198;
     font-size: 30px;
     display: inline-block;
     text-shadow: 1px 1px #fff;
-    padding: .3em 1em;
+    padding: 0.3em 1em;
     border: 1px solid #aaa;
     border-radius: 100px;
     outline: none;
-    background:#fff;
-   
+    background: #fff;
+  }
+
+  &__form {
+    width: 100%;
+  }
 }
-&__form{
-width: 100%;
-
-}
-
-}
-
-

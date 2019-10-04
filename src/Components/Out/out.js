@@ -3,31 +3,24 @@ import React, { useEffect, useState } from "react";
 import "./out.scss";
 import { Button } from "semantic-ui-react";
 
-function Out({ investment, interestRate }) {
+function Out({ investment, interestRate ,handleClickModal}) {
+  const [growthPercent, setGrowthPercent] = useState("");
 
+  useEffect(() => {
+    growingPercentage(investment, interestRate);
+  }, [investment, interestRate]);
 
-    const [growthPercent, setGrowthPercent] = useState("");
+  function growingPercentage(val, precent) {
+    setGrowthPercent((val / 100) * precent);
+  }
 
-    useEffect(() => {
-      growingPercentage(investment, interestRate);
-    }, [investment, interestRate]);
-  
-    function growingPercentage(val, precent) {
-     
-      setGrowthPercent((val / 100) * precent);
-    }
+  const Placeholder = () => {
+    return <div className="placeholder"> Выберите срок инвестирования </div>;
+  };
 
-
-
-
-
-
-const Placeholder = ()=>  {return (<div className='placeholder'> Выберите срок инвестирования </div> 
-)}
-
-    if(!interestRate){
-        return <Placeholder/>
-    }
+  if (!interestRate) {
+    return <Placeholder />;
+  }
 
   return (
     <React.Fragment>
@@ -58,12 +51,19 @@ const Placeholder = ()=>  {return (<div className='placeholder'> Выберит�
         </div>
         <div className="buttom">
           <div className="ammount">
-
             <div className="ammount__title">Стоимость Паев</div>
             <div className="ammount__total">
-              {(investment + growthPercent).toLocaleString("ru-RU")}&ensp;&#8381;
+              {(investment + growthPercent).toLocaleString("ru-RU")}
+              &ensp;&#8381;
             </div>
-            <Button size="massive" color='yellow' className='ammount__button circular'>Получить</Button>
+            <Button
+               onClick = {()=>{handleClickModal(true)}}
+              size="massive"
+              color="yellow"
+              className="ammount__button circular"
+            >
+              Получить
+            </Button>
           </div>
         </div>
       </div>
