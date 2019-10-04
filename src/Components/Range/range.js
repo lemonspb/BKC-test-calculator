@@ -8,41 +8,60 @@ const Range = ({ valueChange }) => {
   valueChange(duration);
 
   const marks = {
-    50: <strong style={{color:'#87A2BA', fontSize:'14px'}}>50&ensp;т.</strong>,
-    500: <strong style={{color:'#87A2BA',fontSize:'14px'}}>500 &ensp;т.</strong>,
-    1000: <strong style={{color:'#87A2BA',fontSize:'14px'}}>1000&ensp;т.</strong>,
-    2000: <strong style={{color:'#87A2BA',fontSize:'14px'}}>2000&ensp;т.</strong>,
-    3000: <strong style={{color:'#87A2BA',fontSize:'14px'}}>3000&ensp;т.</strong>
+    50: (
+      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>50&ensp;т.</strong>
+    ),
+    500: (
+      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
+        500 &ensp;т.
+      </strong>
+    ),
+    1000: (
+      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
+        1000&ensp;т.
+      </strong>
+    ),
+    2000: (
+      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
+        2000&ensp;т.
+      </strong>
+    ),
+    3000: (
+      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
+        3000&ensp;т.
+      </strong>
+    )
   };
 
   const handleChangeValue = e => setDuration(e);
- const handleChangeInput = e =>  {
-   console.log(Number(e.target.value))
-   if((e.target.value.length === 5 || e.target.value >= 50000)  && (e.target.value.length<=6 || e.target.value <= 3000000)){
-    setDuration(e.target.value/1000)
-    console.log(duration)
-  }
-}
+  const handleChangeInput = e => {
+    console.log(Number(e.target.value));
+    if (
+      (e.target.value.length === 5 || e.target.value >= 50000) &&
+      (e.target.value.length <= 6 || e.target.value <= 3000000)
+    ) {
+      setDuration(e.target.value / 1000);
+    }
+  };
   return (
     <div className="range">
       <div className="range__sum">
         <span className="range__text">Сумма для инвестирования</span>
-         <div className='input-sum'>           
-         <input type='number' 
-        className="input-sum__currency"
-        min={50000}
-          max={3000000}
-          onChange={handleChangeInput}
-          step={1000}
-          value={Number(duration*1000)}
-         />
-        <div className='input-sum__icon'>&ensp;&#8381;</div>
-         </div>
-
-         </div>
+        <div className="input-sum">
+          <input
+            type="number"
+            className="input-sum__currency"
+            min={50000}
+            max={3000000}
+            onChange={handleChangeInput}
+            step={1000}
+            value={Number(duration * 1000)}
+          />
+          <div className="input-sum__icon">&ensp;&#8381;</div>
+        </div>
+      </div>
 
       <form className="range__form">
-        
         <Slider
           min={50}
           max={3000}

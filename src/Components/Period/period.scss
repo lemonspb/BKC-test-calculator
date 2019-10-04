@@ -7,11 +7,12 @@
   padding: 30px 20px 200px 20px;
   width: 100%;
 
-  h3{
+  &__title{
       margin-bottom: 50px;
-font-weight: 300;
+font-weight: 400;
+font-size: 16px;
 letter-spacing: 0.9px;
-color: #2D608B;
+color: #326590;
   }
   @media screen and (max-width: 1070px) {
     padding: 30px 20px 50px 20px;
@@ -29,7 +30,7 @@ color: #2D608B;
 
 .button-srock {
     margin-right: 10px !important;
-
+    font-weight: 300 !important;
 
     @media screen and (max-width: 500px) {
     margin-bottom: 10px !important;

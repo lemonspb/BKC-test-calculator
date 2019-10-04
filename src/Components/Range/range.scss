@@ -1,6 +1,6 @@
 .range {
   box-sizing: border-box;
-  padding: 135px  20px 80px 20px;
+  padding: 185px 20px 80px 20px;
   background-color: #dae1e7;
   width: 100%;
   display: flex;
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     @media screen and (max-width: 514px) {
       flex-direction: column;
@@ -23,7 +23,7 @@
 
   &__text {
     font-size: 16px;
-    color: #427198;
+    color: #326590;
 
     @media screen and (max-width: 514px) {
       margin-bottom: 10px;
@@ -37,21 +37,23 @@
     padding: 0 10px;
   }
 }
-.rc-slider-mark-text{
-  width: 100px;
+
+.rc-slider-mark-text {
+  width: 60px;
   margin-top: 14px;
 
 }
-.input-sum{
+
+.input-sum {
   transition: padding 1s ease;
   display: flex;
 
-  &__currency  {
-    color: #1D4176;
+  &__currency {
+    color: #3F6C95;
     max-width: 200px;
     text-align: end;
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 35px;
     margin-top: 0;
     margin-bottom: 9px;
@@ -66,8 +68,9 @@
     border-bottom-right-radius: 0;
     border-right: none;
 
-  }  
-  &__icon{
+  }
+
+  &__icon {
     background: #fff;
     color: #1D4176;
     line-height: 1;
@@ -79,7 +82,7 @@
     border-style: solid;
     border-radius: 100px;
     font-size: 30px;
-  
+
     font-weight: 300;
     text-align: center;
     text-decoration: none;
@@ -91,16 +94,17 @@
     border: none;
     box-shadow: none;
     min-width: 40px;
-  
+
   }
 }
 
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
 }

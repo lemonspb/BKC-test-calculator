@@ -5,9 +5,9 @@ import "./period.scss";
 function Period({ handleClickPeriod, active }) {
   return (
     <div className="period">
-      <h3>
+      <div className='period__title'>
         Срок инвестирования
-      </h3>
+      </div>
       <Button.Group className="srock" onClick={handleClickPeriod}>
         <Button
           value={4.8}

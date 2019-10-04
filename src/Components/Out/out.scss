@@ -4,15 +4,13 @@
   padding: 50px 20px 50px 20px;
 }
 .top {
-  margin: 0 -15px 78px -15px;
+  margin: 0 -15px 40px -15px;
 }
 .investments {
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   @media screen and (max-width: 514px) {
-    flex-direction: column;
     align-items: center;
   }
   &__item {
@@ -27,20 +25,38 @@
       margin-bottom: 20px;
     }
   }
+  &__info{
+position: absolute;
+top: -89px;
+left: 16px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+&--first{
+  left: 16px;
+
+  top: -70px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  }
   &__title {
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     line-height: 21px;
     font-size: 20px;
     color: #326590;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @media screen and (max-width: 514px) {
       font-size: 16px;
     }
   }
   &__count {
     font-weight: 300;
-    font-size: 30px;
+    font-size: 25px;
     color: #3F6C95;
 
     margin-bottom: 20px;
@@ -49,10 +65,19 @@
     }
   }
   &__column {
+    width:170px; 
+    height:200px ;
+    align-items: flex-end;
+    justify-content: flex-end;
  display: flex;
  flex-direction: column;
+ @media screen and (max-width: 514px) {
+  width:140px; 
+
+}
   }
   &__start{
+    position: relative;
     transition: 1s height ease;
 
     width: 100%;
@@ -60,6 +85,8 @@
     background-color: #dae1e7;
   }
   &__grow{
+    position: relative;
+
     transition: 1s height ease;
     width: 100%;
     background-color:#4C9AFF;
@@ -72,7 +99,7 @@
 .precent {
   border-top: 1px solid #2185d0;
   border-bottom: 1px solid #2185d0;
-  padding: 40px 0;
+  padding: 30px 0;
   width: 100%;
   display: flex;
   align-items: baseline;
@@ -85,7 +112,7 @@
   &__text {
     letter-spacing: 0.4px;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     color: #326590;
     @media screen and (max-width: 514px) {
       font-size: 16px;
@@ -93,7 +120,6 @@
   }
   &__sum {
     font-weight: 300;
-
     color: #3F6C95;
     font-size: 40px;
     display: inline-block;
@@ -112,8 +138,7 @@
 
   &__title {
     color: #427198;
-    font-weight: 300px;
-
+    font-weight: 300 !important;
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 30px;
@@ -132,7 +157,7 @@
     }
   }
   &__button{
-    border-radius: 100px !important;
+    border-radius: 100px;
     text-transform: uppercase;
     cursor: pointer;
     display: inline-block;
