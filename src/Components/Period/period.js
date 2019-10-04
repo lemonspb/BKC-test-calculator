@@ -25,7 +25,7 @@ function Period({ handleClickPeriod, active }) {
           color="blue"
           className="button-srock"
         >
-          6 месяцов
+          6 месяцев
         </Button>
         <Button
           value={13.72}

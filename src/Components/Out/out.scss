@@ -4,7 +4,7 @@
   padding: 50px 20px;
 }
 .top {
-  margin: 0 -15px 50px -15px;
+  margin: 0 -15px 78px -15px;
 }
 .investments {
   margin-top: 40px;
@@ -28,18 +28,21 @@
     }
   }
   &__title {
+    font-weight: 400;
     text-align: center;
     line-height: 21px;
     font-size: 20px;
-    color: #2185d0;
+    color: #326590;
     margin-bottom: 20px;
     @media screen and (max-width: 514px) {
       font-size: 16px;
     }
   }
   &__count {
+    font-weight: 300;
     font-size: 30px;
-    color: #427198;
+    color: #3F6C95;
+
     margin-bottom: 20px;
     @media screen and (max-width: 514px) {
       font-size: 20px;
@@ -63,7 +66,7 @@
   }
 }
 .center {
-  margin: 0 0 100px 0;
+  margin: 0 0 60px 0;
 }
 
 .precent {
@@ -72,21 +75,25 @@
   padding: 40px 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   @media screen and (max-width: 514px) {
     flex-direction: column;
   }
   &__text {
+    letter-spacing: 0.4px;
+    font-weight: 400;
     font-size: 20px;
-    color: #427198;
+    color: #326590;
     @media screen and (max-width: 514px) {
       font-size: 16px;
     }
   }
   &__sum {
-    color: #427198;
-    font-size: 35px;
+    font-weight: 300;
+
+    color: #3F6C95;
+    font-size: 40px;
     display: inline-block;
     text-shadow: 1px 1px #fff;
     outline: none;
@@ -104,6 +111,7 @@
 
   &__title {
     color: #427198;
+    font-weight: 300px;
 
     font-size: 30px;
     line-height: 40px;
@@ -113,12 +121,37 @@
     }
   }
   &__total {
-    color: #427198;
+    font-weight: 300;
+    color: #3F6C95;
+
     font-size: 60px;
     margin-bottom: 50px;
     @media screen and (max-width: 514px) {
       font-size: 40px;
     }
+  }
+  &__button{
+    border-radius: 100px !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    padding: 15px 90px;
+    vertical-align: baseline;
+    background: #F3C400 none;
+    color: rgba(0,0,0,.6);
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
+&:hover{
+  background: darken(#F3C400, 10%);
+  color:darken(#fff, 20%);;
+}
+
   }
 }
 .placeholder {

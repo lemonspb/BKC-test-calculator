@@ -1,34 +1,38 @@
-.period{
-    box-sizing: border-box;
+.period {
+  box-sizing: border-box;
 
-    height: 100%;
+  background: #f7f7f7;
+  flex: 1 1 auto;
 
-padding: 30px 20px 275px 20px; 
-width: 100%;
-background-color: #ffff;
+  padding: 30px 20px 275px 20px;
+  width: 100%;
 
-@media screen and (max-width: 1070px) {
-    padding: 30px 20px 50px 20px; 
+  h3{
+      margin-bottom: 50px;
+font-weight: 300;
+letter-spacing: 0.9px;
+color: #2D608B;
+  }
+  @media screen and (max-width: 1070px) {
+    padding: 30px 20px 50px 20px;
+  }
 
 }
-}
 
-.srock{
-width: 100%;
-@media screen and (max-width: 500px) {
+.srock {
+  width: 500px;
+  @media screen and (max-width: 500px) {
     flex-direction: column !important;
-
+    width: 100%;
+  }
 }
-}
+
+.button-srock {
+    margin-right: 10px !important;
 
 
-.button-srock{
     @media screen and (max-width: 500px) {
-        margin-bottom: 10px !important;
-
-        
-    }
-    border-radius: 100px !important;
-  
-   
+    margin-bottom: 10px !important;
+  }
+  border-radius: 100px !important;
 }

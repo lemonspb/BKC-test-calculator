@@ -68,14 +68,13 @@ function Out({ investment, interestRate ,handleClickModal}) {
               {(investment + growthPercent).toLocaleString("ru-RU")}
               &ensp;&#8381;
             </div>
-            <Button
+            <button
                onClick = {()=>{handleClickModal(true)}}
-              size="massive"
-              color="yellow"
-              className="ammount__button circular"
+            
+              className="ammount__button"
             >
               Получить
-            </Button>
+            </button>
           </div>
         </div>
       </div>
