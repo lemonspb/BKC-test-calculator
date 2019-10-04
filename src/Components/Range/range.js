@@ -9,32 +9,29 @@ const Range = ({ valueChange }) => {
 
   const marks = {
     50: (
-      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>50&ensp;т.</strong>
+      <span className='range__mark'>50&ensp;т.</span>
     ),
     500: (
-      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
-        500 &ensp;т.
-      </strong>
+      <span className='range__mark'>500&ensp;т.</span>
+
     ),
     1000: (
-      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
-        1000&ensp;т.
-      </strong>
+      <span className='range__mark'>1000&ensp;т.</span>
+
     ),
     2000: (
-      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
-        2000&ensp;т.
-      </strong>
+      <span className='range__mark'>2000&ensp;т.</span>
+
     ),
     3000: (
-      <strong style={{ color: "#87A2BA", fontSize: "14px" }}>
-        3000&ensp;т.
-      </strong>
+      <span className='range__mark'>3000&ensp;т.</span>
+
     )
   };
 
   const handleChangeValue = e => setDuration(e);
   const handleChangeInput = e => {
+       
     console.log(Number(e.target.value));
     if (
       (e.target.value.length === 5 || e.target.value >= 50000) &&
