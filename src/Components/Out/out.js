@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
 import "./out.scss";
 
 function Out({ investment, interestRate, handleClickModal }) {
+  Out.propTypes={
+    investment: PropTypes.number,
+    interestRate: PropTypes.number,
+    handleClickModal: PropTypes.func
+
+}
+
   const [growthPercent, setGrowthPercent] = useState("");
 
   useEffect(() => {
@@ -35,7 +43,7 @@ function Out({ investment, interestRate, handleClickModal }) {
               <div className="investments__column">
                 <div
                   className="investments__start"
-                  style={{ height: animationColumn(+investment, 1) + "%" }}
+                  style={{ height: animationColumn(investment, 1) + "%" }}
                 >
                   <div className="investments__info--first">
                     <div className="investments__title">Инвестиции</div>
@@ -64,7 +72,7 @@ function Out({ investment, interestRate, handleClickModal }) {
                 </div>
                 <div
                   className="investments__start"
-                  style={{ height: animationColumn(+investment, 1) + "%" }}
+                  style={{ height: animationColumn(investment, 1) + "%" }}
                 ></div>
               </div>
             </div>

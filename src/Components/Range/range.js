@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
+
 import "./range.scss";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 const Range = ({ valueChange }) => {
-  const [duration, setDuration] = useState(50);
+  
+  Range.propTypes={
+    valueChange: PropTypes.func
 
+  }
+
+  const [duration, setDuration] = useState(50);
   valueChange(duration);
 
   const marks = {
@@ -19,6 +26,7 @@ const Range = ({ valueChange }) => {
     const clamped = Math.max(50, Math.min(Number(e.target.value), 3000));
     setDuration(clamped);
   };
+
   return (
     <div className="range">
       <div className="range__sum">
@@ -33,7 +41,7 @@ const Range = ({ valueChange }) => {
             step={10}
             value={Number(duration)}
           />
-          <div className="input-sum__icon">000&ensp;<span>&#8381;</span></div>
+          <div className="input-sum__icon" >000&ensp;<span>&#8381;</span></div>
         </div>
       </div>
 

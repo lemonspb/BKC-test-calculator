@@ -1,13 +1,17 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Button } from "semantic-ui-react";
 import "./period.scss";
 
 function Period({ handleClickPeriod, active }) {
+  Period.propTypes={
+    handleClickPeriod: PropTypes.func,
+    active: PropTypes.string
+
+}
   return (
     <div className="period">
-      <div className='period__title'>
-        Срок инвестирования
-      </div>
+      <div className="period__title">Срок инвестирования</div>
       <Button.Group className="srock" onClick={handleClickPeriod}>
         <Button
           value={4.8}

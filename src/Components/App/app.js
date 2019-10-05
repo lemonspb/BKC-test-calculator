@@ -5,14 +5,18 @@ import Out from "../Out";
 import ModalGet from "../Modal";
 import "./app.scss";
 function App() {
-  const arrayInterest = getRandomItem(["4.8","9.28","13.72","14.35","25.69"])
+  const arrayInterest = getRandomItem([
+    "4.8",
+    "9.28",
+    "13.72",
+    "14.35",
+    "25.69"
+  ]);
 
   const [investment, setInvestment] = useState(0);
   const [interestRate, setInterestRate] = useState(arrayInterest);
   const [active, setActive] = useState(arrayInterest);
   const [modalOpen, setModalOpen] = useState(false);
-
-
 
   function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
@@ -45,7 +49,7 @@ function App() {
         <section className="calculator__right">
           <Out
             investment={investment}
-            interestRate={interestRate}
+            interestRate={Number(interestRate)}
             handleClickModal={handleClickModal}
           />
         </section>
