@@ -33,7 +33,7 @@ const Range = ({ valueChange }) => {
             step={10}
             value={Number(duration)}
           />
-          <div className="input-sum__icon">000&ensp;&#8381;</div>
+          <div className="input-sum__icon">000&ensp;<span>&#8381;</span></div>
         </div>
       </div>
 

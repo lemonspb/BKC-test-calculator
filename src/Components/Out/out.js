@@ -14,7 +14,7 @@ function Out({ investment, interestRate, handleClickModal }) {
   }
 
   function animationColumn(inv, number) {
-     const minInvestment=50000
+    const minInvestment = 50000;
     return inv / minInvestment + number;
   }
 
@@ -40,7 +40,7 @@ function Out({ investment, interestRate, handleClickModal }) {
                   <div className="investments__info--first">
                     <div className="investments__title">Инвестиции</div>
                     <div className="investments__count">
-                      {investment.toLocaleString("ru-RU")}&ensp;&#8381;
+                      {investment.toLocaleString("ru-RU")}&ensp;<span>&#8381;</span>
                     </div>
                   </div>
                 </div>
@@ -54,11 +54,11 @@ function Out({ investment, interestRate, handleClickModal }) {
                 >
                   <div className="investments__info">
                     <div className="investments__title">
-                      Прирост стоймости паев
+                      Прирост стоимости паев
                     </div>
 
                     <div className="investments__count">
-                      {growthPercent.toLocaleString("ru-RU")}&ensp;&#x20bd;
+                      {growthPercent.toLocaleString("ru-RU")}&ensp;<span>&#8381;</span>
                     </div>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ function Out({ investment, interestRate, handleClickModal }) {
             <div className="ammount__title">Стоимость Паев</div>
             <div className="ammount__total">
               {(investment + growthPercent).toLocaleString("ru-RU")}
-              &ensp;&#8381;
+              &ensp;<span>&#8381;</span>
             </div>
             <button
               onClick={() => {
