@@ -7,17 +7,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 1px solid #ADBBC7;
+  border-bottom: 1px solid #adbbc7;
 
-&__mark{
-   color: #326590;
-  font-size: 20px;
-  font-weight: 400;
-  @media screen and (max-width: 514px) {
-    font-size: 14px;
-
+  &__mark {
+    color: #326590;
+    font-size: 20px;
+    font-weight: 400;
+    @media screen and (max-width: 514px) {
+      font-size: 14px;
+    }
   }
-}
 
   &__sum {
     width: 100%;
@@ -32,6 +31,7 @@
   }
 
   &__text {
+    font-weight: 400;
     font-size: 16px;
     color: #326590;
 
@@ -40,8 +40,6 @@
     }
   }
 
-
-
   &__form {
     width: 100%;
     padding: 0 10px;
@@ -49,9 +47,14 @@
 }
 
 .rc-slider-mark-text {
-  width: 100px;
+  width: 85px;
   margin-top: 20px;
-padding-right: 10px;
+  &:last-child {
+    padding-right: 10px;
+  }
+  @media screen and (max-width: 514px) {
+    width: 60px;
+  }
 }
 
 .input-sum {
@@ -59,7 +62,8 @@ padding-right: 10px;
   display: flex;
 
   &__currency {
-    color: #3F6C95;
+    outline: none;
+    color: #3f6c95;
     max-width: 200px;
     text-align: end;
     display: block;
@@ -67,23 +71,22 @@ padding-right: 10px;
     line-height: 35px;
     margin-top: 0;
     margin-bottom: 9px;
-    font-weight: 300;
     margin-bottom: 0;
     text-decoration: none;
     border: none;
     border-radius: 100px;
-    padding: 8px 1px;
+    padding: 12px 1px 10px 3px;
     padding-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: none;
-
   }
 
   &__icon {
+    font-size: 25px;
     background: #fff;
-    color: #1D4176;
-    line-height: 1;
+    color: #3f6c95;
+
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -91,30 +94,20 @@ padding-right: 10px;
     border-width: 1px;
     border-style: solid;
     border-radius: 100px;
-    font-size: 30px;
-
-    font-weight: 300;
     text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
     padding: 11px 40px 11px 2px;
     margin: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border: none;
     box-shadow: none;
-    min-width: 40px;
-
+    max-width: 200px;
   }
 }
 
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button {
-  cursor: pointer;
-}

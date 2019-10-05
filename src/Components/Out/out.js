@@ -13,8 +13,9 @@ function Out({ investment, interestRate, handleClickModal }) {
     setGrowthPercent((val / 100) * precent);
   }
 
-  function animationColumn(inv, num) {
-    return inv / 70000 + num;
+  function animationColumn(inv, number) {
+     const minInvestment=50000
+    return inv / minInvestment + number;
   }
 
   const Placeholder = () => {
