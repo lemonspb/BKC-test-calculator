@@ -10,10 +10,9 @@ const Range = ({ valueChange }) => {
     valueChange: PropTypes.func
 
   }
-
+  const inputSum = React.createRef();
   const [duration, setDuration] = useState(50);
   valueChange(duration);
-
   const marks = {
     50: <span className="range__mark">50&ensp;т.</span>,
     500: <span className="range__mark">500&ensp;т.</span>,
@@ -25,17 +24,21 @@ const Range = ({ valueChange }) => {
     
   setDuration(Number(e))
 };
-  const handleChangeInput = e => {
+const handleChangeInput = e => {
     const clamped = Math.max(50, Math.min(Number(e.target.value), 3000));
     setDuration(clamped);
   };
+
+
+
+
 
   return (
     <div className="range">
       <div className="range__sum">
         <span className="range__text">Сумма для инвестирования</span>
         <div className="input-sum">
-          <input
+          <input ref={inputSum}
             type='number'
             className="input-sum__currency"
             min={50}
@@ -44,7 +47,7 @@ const Range = ({ valueChange }) => {
             step={10}
             value={duration}
           />
-          <div className="input-sum__icon" >000&ensp;<span>&#8381;</span></div>
+          <div className="input-sum__icon"  onClick={()=>{inputSum.current.focus()}}>000&ensp;<span>&#8381;</span></div>
         </div>
       </div>
 
