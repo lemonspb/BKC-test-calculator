@@ -8,7 +8,7 @@
   &__title {
     margin-bottom: 50px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.9px;
     color: #326590;
   }
@@ -19,26 +19,21 @@
 }
 
 .srock {
-  width: 500px;
-
-  @media screen and (max-width: 520px) {
+ @media screen and (max-width: 520px) {
     flex-direction: column !important;
     width: 100%;
   }
 }
 
 .button-srock {
-
   margin-right: 10px !important;
   font-weight: 300 !important;
-&:last-child{
+  &:last-child {
     margin-right: 0px !important;
-
-}
+  }
   @media screen and (max-width: 520px) {
     margin-bottom: 10px !important;
     margin-right: 0px !important;
-
   }
 
   border-radius: 100px !important;

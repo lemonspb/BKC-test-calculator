@@ -86,7 +86,7 @@ function Out({ investment, interestRate, handleClickModal }) {
         </div>
         <div className="buttom">
           <div className="ammount">
-            <div className="ammount__title">Стоимость Паев</div>
+            <div className="ammount__title">Стоимость паев</div>
             <div className="ammount__total">
               {(investment + growthPercent).toLocaleString("ru-RU")}
               &ensp;<span>&#8381;</span>

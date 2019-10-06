@@ -41,6 +41,7 @@ function App() {
 
   return (
     <React.Fragment>
+      <h3 className='title'> Калькулятор </h3>
       <div className="calculator">
         <section className="calculator__left">
           <Range valueChange={valueChange} />

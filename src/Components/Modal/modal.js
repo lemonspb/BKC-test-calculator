@@ -8,13 +8,11 @@ const ModalGet = ({ modalOpen, closeModal }) => {
     ModalGet.propTypes={
         modalOpen: PropTypes.bool,
         closeModal: PropTypes.func
-
-    }
-
+     }
 
 
 
-  return (
+return (
     <Modal
     open={modalOpen}
     size="tiny"

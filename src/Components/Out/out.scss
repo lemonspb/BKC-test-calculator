@@ -28,13 +28,12 @@
   &__info {
     position: absolute;
     top: -89px;
-    left: 16px;
-
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     &--first {
-      left: 16px;
+      left:0;
       top: -70px;
       position: absolute;
       display: flex;
@@ -43,10 +42,10 @@
     }
   }
   &__title {
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     line-height: 21px;
-    font-size: 20px;
+    font-size: 18px;
     color: #326590;
     margin-bottom: 10px;
     @media screen and (max-width: 514px) {
@@ -54,13 +53,13 @@
     }
   }
   &__count {
-    font-weight: 300;
-    font-size: 25px;
+    font-weight: 400;
+    font-size: 30px;
     color: #3f6c95;
     margin-bottom: 20px;
-    span{
+     span{
       font-family: 'Roboto', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     @media screen and (max-width: 514px) {
@@ -81,14 +80,13 @@
   &__start {
     position: relative;
     transition: 0.5s height ease-in-out;
-
     width: 100%;
     height: 20px;
     background-color: #dae1e7;
   }
   &__grow {
     position: relative;
-    transform: scaleY(1,0.5);
+
     transition: 0.5s height ease-in-out;
     width: 100%;
     background-color: #4c9aff;
@@ -113,7 +111,7 @@
   &__text {
     letter-spacing: 0.4px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     color: #326590;
     @media screen and (max-width: 514px) {
       font-size: 16px;
@@ -121,9 +119,9 @@
     }
   }
   &__sum {
-    font-weight: 300;
+    font-weight: 400;
     color: #3f6c95;
-    font-size: 40px;
+    font-size: 35px;
     display: inline-block;
     text-shadow: 1px 1px #fff;
     outline: none;
@@ -139,8 +137,8 @@
   flex-direction: column;
 
   &__title {
-    color: #427198;
-    font-weight: 300 !important;
+    color: #326590;
+    font-weight: 400;
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 30px;
@@ -151,7 +149,6 @@
   &__total {
     font-weight: 300;
     color: #3f6c95;
-
     font-size: 55px;
     margin-bottom: 50px;
     span{
@@ -170,19 +167,16 @@
     outline: 0;
     border: none;
     padding: 15px 90px;
-    vertical-align: baseline;
     background: #f3c400;
-    color: rgba(0, 0, 0, 0.6);
     font-size: 20px;
     font-weight: 400;
-    font-style: normal;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 0 0 1px transparent inset,
-      0 0 0 0 rgba(34, 36, 38, 0.15) inset;
-      transition: 0.5s background ease-in-out;
+    transition: 0.5s background ease-in-out;
     &:hover {
       background: #64C8FF;
+      color: rgba(255,255, 255, 0.8);
+
     }
   }
 }

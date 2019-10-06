@@ -21,7 +21,10 @@ const Range = ({ valueChange }) => {
     2000: <span className="range__mark">2000&ensp;т.</span>,
     3000: <span className="range__mark">3000&ensp;т.</span>
   };
-  const handleChangeValue = e => setDuration(Number(e));
+  const handleChangeValue = e => {
+    
+  setDuration(Number(e))
+};
   const handleChangeInput = e => {
     const clamped = Math.max(50, Math.min(Number(e.target.value), 3000));
     setDuration(clamped);
@@ -33,13 +36,13 @@ const Range = ({ valueChange }) => {
         <span className="range__text">Сумма для инвестирования</span>
         <div className="input-sum">
           <input
-            type="number"
+            type='number'
             className="input-sum__currency"
             min={50}
             max={3000}
             onChange={handleChangeInput}
             step={10}
-            value={Number(duration)}
+            value={duration}
           />
           <div className="input-sum__icon" >000&ensp;<span>&#8381;</span></div>
         </div>
